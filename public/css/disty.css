@@ -1017,14 +1017,14 @@ body.is-dark {
     }
 
     .staff-header h1 {
-        margin: 0;
+        margin: 0 0 8px;
         color: #1f1b18;
         font-size: 22px;
         font-weight: 800;
     }
 
     .staff-header p {
-        margin: 6px 0 0;
+        margin: 0;
         color: #8a6f5f;
         font-size: 14px;
     }
@@ -1037,7 +1037,7 @@ body.is-dark {
     .staff-table {
         width: 100%;
         border-collapse: collapse;
-        border: 1px solid #d8cfc2;
+        border: 2px solid #cfc5b8;
         background: #ffffff;
     }
 
@@ -1047,14 +1047,14 @@ body.is-dark {
 
     .staff-table th,
     .staff-table td {
-        border: 1px solid #d8cfc2;
+        border: 1px solid #cfc5b8;
         padding: 14px 16px;
         text-align: left;
         vertical-align: middle;
     }
 
     .staff-table th {
-        color: #8a6f5f;
+        color: #6f4a2f;
         font-size: 13px;
         font-weight: 800;
         letter-spacing: 0.5px;
@@ -1065,33 +1065,12 @@ body.is-dark {
         font-size: 14px;
     }
 
+    .staff-table tbody tr:nth-child(even) {
+        background: #fcfaf7;
+    }
+
     .staff-table tbody tr:hover {
-        background: #faf7f1;
-    }
-
-    .staff-name {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .staff-avatar {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: #a76a2d;
-        color: #ffffff;
-        display: grid;
-        place-items: center;
-        font-weight: 800;
-        font-size: 14px;
-        flex-shrink: 0;
-    }
-
-    .staff-name strong {
-        color: #1f1b18;
-        font-size: 15px;
-        font-weight: 700;
+        background: #f5efe6;
     }
 
     .empty-table {
@@ -1113,10 +1092,6 @@ body.is-dark {
         .staff-table td {
             padding: 12px;
             font-size: 13px;
-        }
-
-        .staff-header h1 {
-            font-size: 20px;
         }
     }
 }
