@@ -4,21 +4,73 @@
 ])
 
 @section('content')
-    <div class="staff-list">
-        @forelse ($staff as $person)
-            <article class="staff-item">
-                <div class="avatar-box">♙</div>
-
+    <div class="staff-page">
+        <section class="staff-card">
+            <div class="staff-header">
                 <div>
-                    <h3>{{ $person->full_name }}</h3>
-
-                    <p class="{{ $person->status === 'active' ? 'available' : 'unavailable' }}">
-                        {{ $person->status === 'active' ? 'Available' : 'Unavailable' }}
-                    </p>
+                    <h1>Staff Customer Service</h1>
+                    <p>Ringkasan jumlah customer yang ditangani oleh masing-masing CS.</p>
                 </div>
-            </article>
-        @empty
-            <p>No staff found.</p>
-        @endforelse
+            </div>
+
+            <div class="staff-table-wrapper">
+                <table class="staff-table">
+                    <thead>
+                        <tr>
+                            <th>Nomor</th>
+                            <th>Nama</th>
+                            <th>Total Cust</th>
+                            <th>Finished Cust</th>
+                            <th>On-going Cust</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @forelse ($staffStats as $index => $staff)
+                            <tr>
+                                <td>{{ $index + 1 }}</td>
+
+                                <td>
+                                    <div class="staff-name">
+                                        <div class="staff-avatar">
+                                            {{ strtoupper(substr($staff->full_name, 0, 1)) }}
+                                        </div>
+
+                                        <div>
+                                            <strong>{{ $staff->full_name }}</strong>
+                                            <span>{{ $staff->email }}</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <span class="count-badge neutral">
+                                        {{ $staff->total_cust }}
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="count-badge success">
+                                        {{ $staff->finished_cust }}
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="count-badge warning">
+                                        {{ $staff->ongoing_cust }}
+                                    </span>
+                                </td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="5" class="empty-table">
+                                    Belum ada data staff customer service.
+                                </td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </div>
 @endsection

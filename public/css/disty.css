@@ -993,4 +993,153 @@ body.is-dark {
             padding: 18px;
         }
     }
+
+    /* ================================
+   STAFF PAGE
+================================ */
+
+    .staff-page {
+        padding: 28px;
+        background: #f7f4ed;
+        min-height: calc(100vh - 68px);
+    }
+
+    .staff-card {
+        background: #ffffff;
+        border: 1px solid #e3dbcf;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(74, 48, 24, 0.08);
+        padding: 24px;
+    }
+
+    .staff-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+    }
+
+    .staff-header h1 {
+        margin: 0;
+        color: #1f1b18;
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    .staff-header p {
+        margin: 6px 0 0;
+        color: #8a6f5f;
+        font-size: 14px;
+    }
+
+    .staff-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .staff-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .staff-table thead {
+        background: #ebe7df;
+    }
+
+    .staff-table th {
+        padding: 14px 16px;
+        color: #8a6f5f;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .staff-table td {
+        padding: 16px;
+        border-bottom: 1px solid #eee7dc;
+        color: #2d241f;
+        font-size: 14px;
+    }
+
+    .staff-table tbody tr:hover {
+        background: #faf7f1;
+    }
+
+    .staff-name {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .staff-avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #a76a2d;
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+    }
+
+    .staff-name strong {
+        display: block;
+        color: #1f1b18;
+        font-size: 15px;
+    }
+
+    .staff-name span {
+        display: block;
+        margin-top: 3px;
+        color: #8a6f5f;
+        font-size: 12px;
+    }
+
+    .count-badge {
+        min-width: 42px;
+        display: inline-flex;
+        justify-content: center;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .count-badge.neutral {
+        color: #6f4a2f;
+        background: #f3eadf;
+    }
+
+    .count-badge.success {
+        color: #15803d;
+        background: #dcfce7;
+    }
+
+    .count-badge.warning {
+        color: #b45309;
+        background: #fef3c7;
+    }
+
+    .empty-table {
+        text-align: center;
+        color: #8a6f5f;
+        padding: 28px !important;
+    }
+
+    @media (max-width: 768px) {
+        .staff-page {
+            padding: 18px;
+        }
+
+        .staff-card {
+            padding: 18px;
+        }
+
+        .staff-table th,
+        .staff-table td {
+            padding: 12px;
+        }
+    }
 }
